@@ -3,5 +3,7 @@ phases:
 
   build:
     commands:
+      - npm install
+      - npm install -g serverless
       - mvn clean install
       - serverless deploy --stage cicd | tee deploy.out
